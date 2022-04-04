@@ -1,0 +1,43 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Predict Melanoma</title>
+
+    
+
+    <link rel="shortcut icon" href='{% static  "Prediction/assets/images/fav.jpg" %}'>
+    <link rel="stylesheet" href='{% static  "Prediction/assets/css/bootstrap.min.css" %}'>
+    <link rel="stylesheet" href='{% static  "Prediction/assets/css/fontawsom-all.min.css" %}'>
+    <link rel="stylesheet" href='{% static  "Prediction/assets/plugins/slider/css/owl.carousel.min.css" %}'>
+    <link rel="stylesheet" href='{% static  "Prediction/assets/plugins/slider/css/owl.theme.default.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{% static  "Prediction/assets/css/style.css" %}'/>
+</head>
+
+    
+{% load crispy_forms_tags %}
+{%  block content  %}
+
+
+    <div class='content-section' style="width: 50%; margin: auto; margin-top: 2%;">
+        <form method='POST' style="width: 50%; margin: auto; margin-top: 2%;">
+            {% csrf_token %}
+            <fieldset class='form-group'>
+                <legend class='border-bottom mb-4'>Log In</legend>
+                {{  form|crispy  }}
+            </fieldset>
+            <div class='form-group'>
+                <button class='btn btn-outline-info' type='submit'>Login</button>
+            </div>
+        </form>
+        <div class='border-top pt-3'>
+            <small class='text-muted'>
+                Need An Account?  <a class='ml-2' href='{%  url "register" %}'>Sign Up Now</a>
+            </small>
+        </div>
+    </div>
+    {%  endblock content  %}
+   

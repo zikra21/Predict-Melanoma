@@ -1,0 +1,30 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Melanoma Tumour Size Prediction App </title>
+
+    
+
+    <link rel="shortcut icon" href='{% static  "Prediction/assets/images/fav.jpg" %}'>
+    <link rel="stylesheet" href='{% static  "Prediction/assets/css/bootstrap.min.css" %}'>
+    <link rel="stylesheet" href='{% static  "Prediction/assets/css/fontawsom-all.min.css" %}'>
+    <link rel="stylesheet" href='{% static  "Prediction/assets/plugins/slider/css/owl.carousel.min.css" %}'>
+    <link rel="stylesheet" href='{% static  "Prediction/assets/plugins/slider/css/owl.theme.default.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{% static  "Prediction/assets/css/style.css" %}'/>
+</head>
+
+{%  block content  %}
+    <h2>You have Been Logged Out</h2>
+        
+        <div class='border-top pt-3'>
+            <small class='text-muted'>
+                Need An Account?  <a href='{%  url "login" %}'>Login Again</a>
+            </small>
+        </div>
+    
+    {%  endblock content  %}
+   
